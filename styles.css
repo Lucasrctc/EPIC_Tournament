@@ -1,12 +1,31 @@
+/* Body Background */
+body {
+  background-color: #121212; /* Dark gray background */
+  color: #ffffff; /* White text for contrast */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Scrollable Wrapper */
+.bracket-scroll {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Disable vertical scrolling */
+  width: 100%; /* Make the wrapper span the full viewport width */
+  margin: 0 auto; /* Center horizontally */
+  border: 1px solid #444444; /* Subtle border for dark mode */
+}
+
 /* Bracket Container */
 .bracket-container {
   position: relative;
   margin: 20px auto; /* Center the bracket */
-  background-color: #ffffff; /* White background for the bracket */
-  border: 2px solid #007bff; /* Blue border */
+  background-color: #1e1e1e; /* Slightly lighter dark background for contrast */
+  border: 2px solid #444444; /* Dark gray border */
   border-radius: 10px; /* Rounded edges */
-  overflow: hidden; /* Prevent overflow issues */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Prevent content overflow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+  display: inline-block; /* Prevent it from stretching horizontally */
 }
 
 /* SVG Connectors */

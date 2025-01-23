@@ -46,7 +46,7 @@ competitors = [
 ];
 
 // Global variables for largest cell dimensions
-let largestCellHeight = 30;
+let largestCellHeight = 35;
 let largestCellWidth = 300;
 
 // Calculate the next power of 2
@@ -187,7 +187,12 @@ function generateBracket(data) {
       cell.style.height = `${largestCellHeight}px`;
       cell.style.padding = "5px"; // Reduce padding for better fit
       cell.style.lineHeight = "1.2"; // Tighten line spacing
-      cell.style.textAlign = "center";
+
+      // Center the text horizontally and vertically
+      cell.style.display = "flex"; // Use flexbox
+      cell.style.justifyContent = "center"; // Center horizontally
+      cell.style.alignItems = "center"; // Center vertically
+
       cell.style.border = "2px solid #007bff";
       cell.style.borderRadius = "5px";
       cell.style.backgroundColor = "#ffffff";
