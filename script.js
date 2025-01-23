@@ -47,7 +47,7 @@ competitors = [
 
 // Global variables for largest cell dimensions
 let largestCellHeight = 35;
-let largestCellWidth = 320;
+let largestCellWidth = 360;
 
 // Calculate the next power of 2
 const nextPowerOf2 = Math.pow(2, Math.ceil(Math.log2(competitors.length)));
