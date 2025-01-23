@@ -1,42 +1,44 @@
+/* Bracket Container */
 .bracket-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 600px; /* Match totalHeight from JS */
   position: relative;
+  margin: 20px auto; /* Center the bracket */
+  background-color: #ffffff; /* White background for the bracket */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 10px; /* Rounded edges */
+  overflow: hidden; /* Prevent overflow issues */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.round {
-  position: relative;
-}
-
-.cell {
-  background-color: #ffffff;
-  border: 2px solid #007BFF;
-  border-radius: 5px;
-  width: 150px;
-  height: 50px;
-  text-align: center;
-  font-weight: bold;
-  color: #007BFF;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.cell.winner {
-  background-color: #28a745;
-  color: #fff;
-}
-
+/* SVG Connectors */
 .connections {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
-  pointer-events: none; /* Ensure it doesn't block interactions with cells */
+  z-index: 0; /* Place behind the cells */
+  pointer-events: none; /* Prevent interaction with connectors */
 }
+
+/* Bracket Cells */
+#bracket {
+  position: relative;
+  z-index: 1; /* Place above the connectors */
+}
+
+/* Dimmed Cells (Winner or Loser) */
+.cell.dimmed {
+  opacity: 0.5; /* Reduce opacity to indicate it's inactive */
+  background-color: #f5f5f5; /* Light gray background */
+  color: #cccccc; /* Gray text color */
+}
+
+/* Winner Cell */
+.cell.winner {
+  background-color: #28a745; /* Green background */
+  color: #ffffff; /* White text */
+  border: 2px solid #1e7e34; /* Dark green border */
+  box-shadow: 0px 0px 10px #28a745; /* Green glow effect */
+}
+
 
